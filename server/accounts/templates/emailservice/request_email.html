@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permission Request Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .header {
+            text-align: center;
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            margin: 20px 0;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #333;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h2>Permission Request</h2>
+        </div>
+        <div class="content">
+            <p>Dear User,</p>
+            <p>
+                The user <strong>{{ requesting_user_name }}</strong> 
+                (Email: <strong>{{ requesting_user_email }}</strong>) 
+                has requested access to the following session link:
+            </p>
+            <p><a href="{{ session_link }}" target="_blank">{{ session_link }}</a></p>
+            <p>
+                Please log in to your account and grant or deny this request.
+            </p>
+        </div>
+        <div class="footer">
+            <p>Best regards,<br>Your Team</p>
+            <p>
+                Visit us at <a href="https://yourwebsite.com" target="_blank">Your Website</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

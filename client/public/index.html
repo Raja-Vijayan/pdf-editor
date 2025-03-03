@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description"
+    content="Welcome to Print Your Moments: Yearbook Cards—your go-to platform for creating and printing personalized cards that capture the special memories of your school year. Celebrate friendships, achievements, and unforgettable moments with custom-designed cards that you'll treasure for years to come!" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="%PUBLIC_URL%/plugins/jqueryui-ruler/css/jquery.ui.ruler.css">
+
+  <script src="%PUBLIC_URL%/lib/webviewer.min.js"></script>
+  <title>Yearbook Print Your Moments - Yearbook Cards</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <script>
+    window.env = {
+      REACT_APP_SITE_URL: "%REACT_APP_SITE_URL%"
+    };
+
+    const script = document.createElement('script');
+    script.defer = true;
+    script.setAttribute('data-site', window.env.REACT_APP_SITE_URL);
+    script.src = "https://api.nepcha.com/js/nepcha-analytics.js";
+
+    document.body.appendChild(script);
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+    integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="%PUBLIC_URL%/plugins/external/jquery-1.11.1.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/external/jquery-ui.min.js"></script>
+  <script src="%PUBLIC_URL%/plugins/jqueryui-ruler/js/jquery.ui.ruler.js"></script>
+  <script src="%PUBLIC_URL%/plugins/box-model/box-modeling.js"></script>
+  <script src="https://api.convergepay.com/hosted-payments/Checkout.js"></script>
+  <script>
+    var jquery = $.noConflict(true);
+  </script>
+
+</body>
+
+</html>

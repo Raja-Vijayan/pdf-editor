@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .email-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .header {
+            text-align: center;
+            padding: 0px 0;
+            background-color: #4CAF50; 
+            color: #ffffff;
+        }
+        .header h1 {
+            color: #333;
+        }
+        .header img{
+            width: 25%;
+        }
+        .order-details {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 15px;
+            color: #888;
+        }
+        .footer .social-icons {
+            margin-top: 10px;
+        }
+        .footer .social-icons img {
+            margin: 0 10px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="images/logo.png" alt="Your Logo" width="140" height="70">
+        </div>
+        <div class="order-details">
+            <p>Dear Users,</p>
+            <p>
+                You have received a yearbook design that has been shared for your review and editing. Kindly take a moment to review the design and make any necessary adjustments according to the specified requirements.
+            </p>
+            
+            <p>
+                Use the following credentials to login:<br>
+                <span style="color: green;">Access Code: </span>{{ access_code }}<br>
+                <span style="color: green;">Email: </span>{{ email }}
+            </p>
+            <p>You have been granted access to the following session link:</p>
+            <p><a href="{{ session_link }}" target="_blank">{{ session_link }}</a></p>
+{% comment %} 
+            <p>Here is a preview of the yearbook design:</p>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="{{ image_url }}" alt="Yearbook Preview" style="max-width: 100%; height: auto; border: 1px solid #ddd; padding: 10px;">
+            </div> {% endcomment %}
+
+            
+        </div>
+        <div class="footer">
+            <p>Visit us</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

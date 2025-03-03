@@ -1,0 +1,10 @@
+ENTER_ACCESS_CODE = "Please enter the access code."
+INVALID_ACCESS_CODE = "Invalid access code."
+SUCCESS = "Success."
+ENTER_EMAIL_NUMBER = "Please enter the email or phone number."
+INVALID_EMAIL_NUMBER = "Invalid email or phone number."
+UNABLE_TO_UPLOAD_FILE = "Unable to upload file."
+UNABLE_TO_FETCH_IMAGES = "Unable to fetch images."
+IMAGE_UPLOAD_SUCCESS = 'Image uploaded successfully.'
+CREATE_USER_SUCCESS = "New user created successfully."
+DUPLICATE_USER = "The mail address is already registered."

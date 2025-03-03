@@ -1,0 +1,11 @@
+Django==5.0.6
+djangorestframework==3.15.2
+pillow==10.4.0
+sqlparse==0.5.0
+python-dotenv==1.0.1
+django-cors-headers==4.4.0
+requests
+pymysql
+rest_framework_simplejwt
+djangorestframework-simplejwt
+python-decouple==3.8
